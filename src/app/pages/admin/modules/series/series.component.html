@@ -1,0 +1,19 @@
+<main style="padding: 0 100px">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Genêro</th>
+        <th scope="col">Sinopse</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of seriesList">
+
+        <td>{{ item.name }}</td>
+        <td>{{ item.gender }}</td>
+        <td>{{ item.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+</main>
