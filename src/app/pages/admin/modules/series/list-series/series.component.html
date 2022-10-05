@@ -1,3 +1,4 @@
+<a class="btn btn-primary" [routerLink]="['/admin/form-series']">Nova série</a>
 <main style="padding: 0 100px">
   <table class="table table-striped">
     <thead>
@@ -5,14 +6,20 @@
         <th scope="col">Nome</th>
         <th scope="col">Genêro</th>
         <th scope="col">Sinopse</th>
+        <th scope="col">Ações</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of seriesList">
-
         <td>{{ item.name }}</td>
         <td>{{ item.gender }}</td>
         <td>{{ item.description }}</td>
+        <td>
+          <button (click)="delete(item.id)">Deletar</button>
+        </td>
+        <td>
+          <button (click)="editar(item.id)">Editar</button>
+        </td>
       </tr>
     </tbody>
   </table>

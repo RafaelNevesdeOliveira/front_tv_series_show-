@@ -1,0 +1,22 @@
+<main style="padding:40px ;">
+  <form [formGroup]="formSeries" (ngSubmit)="onSubmit()">
+
+    <div class="mb-3">
+      <label for="formGroupExampleInput" class="form-label">Nome</label>
+      <input formControlName="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Insira o nome">
+    </div>
+    <div class="mb-3">
+      <label for="formGroupExampleInput2" class="form-label">Genêro</label>
+      <input formControlName="gender" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Insira um genêro">
+    </div>
+    <div class="mb-3">
+      <label for="formGroupExampleInput2" class="form-label">Sinopse</label>
+      <textarea formControlName="description" class="form-control" name="" id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      <i class="bi bi-save-fill"></i> Salvar
+    </button>
+
+  </form>
+</main>

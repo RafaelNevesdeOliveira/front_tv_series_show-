@@ -8,9 +8,22 @@ const routes: Routes = [
     component: AdminComponent,
     children:[
       {
-        path: 'series',
-        loadChildren: () => import('./modules/series/series.module').then((module) => module.SeriesModule)
+        path: 'list-series',
+        loadChildren: () => import('./modules/series/list-series/series.module').then((module) => module.SeriesModule)
       },
+      {
+        path: 'form-series',
+        loadChildren: () => import('./modules/series/form-series/form-series.module').then((module) => module.FormSeriesModule)
+      },
+      {
+        path: 'edit-series/:id',
+        loadChildren: () => import('./modules/series/edit-series/edit-series.module').then((module) => module.EditSeriesModule)
+      },
+      {
+        redirectTo: 'list-series',
+        path: '**'
+
+      }
     ]
   }
 ];
